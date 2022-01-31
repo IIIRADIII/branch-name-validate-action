@@ -1,0 +1,7 @@
+name: 'Branch name validation'
+description: 'Simple script that validates your branch name against number of patterns'
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/validate.sh ${{ github.ref_name }}
+      shell: bash
